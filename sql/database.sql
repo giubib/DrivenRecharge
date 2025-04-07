@@ -6,9 +6,8 @@ CREATE TABLE carriers (
 
 CREATE TABLE clients (
   id SERIAL PRIMARY KEY,
-  document VARCHAR(11) NOT NULL UNIQUE, 
-  name VARCHAR(255) NOT NULL           
-);
+  document VARCHAR(11) NOT NULL UNIQUE
+           );
 
 
 CREATE TABLE phones (

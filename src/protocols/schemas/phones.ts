@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { CreatePhone } from "../types/Phone";
+import { CreatePhone } from "../types";
 
 export const phoneSchema = Joi.object<CreatePhone>({
   document: Joi.string()

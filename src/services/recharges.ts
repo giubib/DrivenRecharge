@@ -1,10 +1,11 @@
 import RechargeRepository from "../repositories/recharges";
 import { ValidationError, NotFoundError } from "../errors";
-import { CreateRecharge, RechargeWithPhone } from "../protocols/types/Recharge";
+import { CreateRecharge, RechargeWithPhone, Recharge } from "../protocols/types";
 
 export default {
-  async createRecharge(data: CreateRecharge) {
-    if (!(await RechargeRepository.phoneExists(data.phone_id))) {
+  async createRecharge(data: CreateRecharge): Promise<Recharge> {
+    const phoneExists = await RechargeRepository.phoneExists(data.phone_id);
+    if (!phoneExists) {
       throw new NotFoundError("Telefone não cadastrado");
     }
 

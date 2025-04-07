@@ -1,6 +1,6 @@
 import PhoneRepository from "../repositories/phones";
 import ClientRepository from "../repositories/clients";
-import { CreatePhone, PhoneWithCarrier } from "../protocols/types/Phone";
+import { CreatePhone, PhoneWithCarrier } from "../protocols/types";
 import { ValidationError, ConflictError, NotFoundError } from "../errors";
 
 export default {

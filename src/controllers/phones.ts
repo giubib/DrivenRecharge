@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import PhoneService from "../services/phones";
-import { CreatePhone } from "../protocols/types/Phone";
+import { CreatePhone } from "../protocols/types";
 
 export default {
   async create(req: Request, res: Response) {

@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { CreateRecharge } from "../types/Recharge";
+import { CreateRecharge } from "../types";
 
 export const rechargeSchema = Joi.object<CreateRecharge>({
   phone_id: Joi.number().integer().positive().required().messages({
